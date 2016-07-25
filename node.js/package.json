@@ -1,0 +1,13 @@
+{
+  "name": "izea-web-service",
+  "version": "1.0.0",
+  "description": "Webservice for docker",
+  "author": "Corey Severino",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
