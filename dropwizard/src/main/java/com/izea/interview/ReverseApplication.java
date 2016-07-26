@@ -15,7 +15,7 @@ public class ReverseApplication extends Application<ReverseConfiguration> {
 
     @Override
     public String getName() {
-        return "hello-world";
+        return "reverse";
     }
 
     @Override
@@ -31,5 +31,4 @@ public class ReverseApplication extends Application<ReverseConfiguration> {
         );
         environment.jersey().register(resource);
     }
-
 }

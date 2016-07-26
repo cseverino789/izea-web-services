@@ -20,9 +20,14 @@ public class ReverseResource {
     @GET
     public String reverse(@QueryParam("input") Optional<String> input) {
         // Reverse the Optional String Parameter "input"
+        final StringBuffer sb_input = new StringBuffer();
         
-        final StringBuffer sb_input = new StringBuffer(input.or(""));
+        if ( input.isPresent() ) {            
+            for (int i = input.get().length()-1; i >= 0; i-- ) {
+                sb_input.append(input.get().charAt(i));
+            }
+        }
 
-        return String.format(template, sb_input.reverse());
+        return String.format(template, sb_input.toString());
     }
 }
