@@ -4,13 +4,15 @@ const express = require('express');
 const app = express();
 
 // Application
-app.get('/reverse/:inpt', function (req, res) {
+app.get('/reverse', function (req, res) {
   var ans = '';
-  const inpt = req.params.inpt;
+  const inpt = req.query.input;
 
-  for (var i = inpt.length-1; i >= 0; i--)
-     ans += inpt[i];
-
+  if (inpt != null) {
+    for (var i = inpt.length-1; i >= 0; i--)
+      ans += inpt[i];
+  } 
+  
   res.send(ans);
 });
 
