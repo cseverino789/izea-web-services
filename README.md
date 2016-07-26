@@ -58,15 +58,15 @@ docker stop <name/id>
 ```
 
 # dropwizard
-The dropwizard project is basic application utilizing the Restful components to produce the same result.
+The dropwizard project is basic application utilizing the Restful (Jetty/Jersey/Jackson) components of dropwizard to produce the same result.
 
 ## Building the jar
 In this case, running maven is required to produce the "fat" jar to be used in the container. To build use maven:
-'''
+```
 cd ./dropwizard/
 mvn package
-'''
-This will create the `target/` containing the jar
+```
+This will create the `target/` dir containing the jar
 
 ## Building the Container
 Same as above but make sure to use a different tag like:
